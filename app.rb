@@ -6,14 +6,10 @@ class Birthday < Sinatra::Base
     erb :index
   end
 
-  # post'/' do
-  #   erb :index
-  #   @name = params[:name]
-  #   redirect('/form')
-  # end
-
   post '/form' do
     @name = params[:name]
+    @day = params[:day]
+    @month = params[:month]
     erb :form
   end
 
