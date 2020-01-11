@@ -1,11 +1,12 @@
 class Timepiece
 
-  attr_reader :todays_date
+  attr_reader :todays_date, :name, :day, :month
 
-  def initialize
+  def initialize(name, day, month)
     @todays_date = Time.new.yday
-  #   @birthday = userinput
-  #   @name = name
+    @name = name
+    @day = day
+    @month = month
   end
-
+  
 end

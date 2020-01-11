@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/timepiece'
 
 class Birthday < Sinatra::Base
 
@@ -7,9 +8,7 @@ class Birthday < Sinatra::Base
   end
 
   post '/birthday_message' do
-    @name = params[:name]
-    @day = params[:day]
-    @month = params[:month]
+    @user = Timepiece.new(params[:name], params[:day], params[:month])
     erb :birthday_message
   end
 
