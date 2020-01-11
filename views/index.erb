@@ -1,24 +1,39 @@
-<center><h1> Wasssssup! </h1></center>
+<head>
+  <style>
+    body {
+      background-color: #CDE7EA;
+      font-family: Serif;
+      text-align: center;
+      vertical-align: middle;
+      color:14494F;
+    }
+    input, label {
+      /* font-size: 30px; */
+      font-family: Serif;
+    }
+  </style>
+</head>
+
+<center><h1> Birthday Calculator! </h1></center>
 
 <center><h2> Please enter the following details: </h2></center>
 
-<center><form action="/form" method="post">
+<center><form action="/birthday_message" method="post">
   <input type='text' name=name placeholder="Enter Name">
-  <input type='day' name=day placeholder="Day of Birth">
+  <input style="width: 70px" type='day' name=day placeholder="Day of Birth">
   <select name=month>
-    <option value="January">January</option>
-    <option value="February">February</option>
-    <option value="March">March</option>
-    <option value="April">April</option>
-    <option value="May">May</option>
-    <option value="June">June</option>
-    <option value="July">July</option>
-    <option value="August">August</option>
-    <option value="September">September</option>
-    <option value="October">October</option>
-    <option value="November">November</option>
-    <option value="December">December</option>
+    <option value=1>January</option>
+    <option value=2>February</option>
+    <option value=3>March</option>
+    <option value=4>April</option>
+    <option value=5>May</option>
+    <option value=6>June</option>
+    <option value=7>July</option>
+    <option value=8>August</option>
+    <option value=9>September</option>
+    <option value=10>October</option>
+    <option value=11>November</option>
+    <option value=12>December</option>
   </select>
-
-  <input type='submit' value='Submit'>
+  <input type='submit' value='Calculate!'>
 </form></center>

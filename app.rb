@@ -6,11 +6,11 @@ class Birthday < Sinatra::Base
     erb :index
   end
 
-  post '/form' do
+  post '/birthday_message' do
     @name = params[:name]
     @day = params[:day]
     @month = params[:month]
-    erb :form
+    erb :birthday_message
   end
 
   run! if app_file == $0
