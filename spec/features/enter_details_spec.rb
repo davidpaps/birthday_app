@@ -5,6 +5,6 @@ feature "testing name form" do
     fill_in :day, with: "1"
     select(:January, from: :month)
     click_button "Calculate!"
-    expect(page).to have_content "Happy Birthday David!"
+    expect(page).to have_content "David, there are" 
   end
 end

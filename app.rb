@@ -20,7 +20,7 @@ class Birthday < Sinatra::Base
     @name = session[:name]
     @day = session[:day]
     @month = session[:month]
-    @user = Timepiece.new(@day, @month)
+    @user = Timepiece.new(@month, @day)
     @user.birthday? ? (redirect to('/birthday_message')) :  (redirect to('/birthday_countdown'))
   end
 
@@ -33,7 +33,7 @@ class Birthday < Sinatra::Base
     @name = session[:name]
     @day = session[:day]
     @month = session[:month]
-    @user = Timepiece.new(@day, @month)
+    @user = Timepiece.new(@month, @day)
     @countdown = @user.calculate_countdown
     erb :birthday_countdown
   end
