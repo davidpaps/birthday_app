@@ -37,8 +37,5 @@ class Birthday < Sinatra::Base
     @countdown = @user.calculate_countdown
     erb :birthday_countdown
   end
-
-   
-  run! if app_file == $0
-
+  
 end
