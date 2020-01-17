@@ -5,6 +5,10 @@ class Birthday < Sinatra::Base
 
   enable :sessions
 
+  before do
+    @timepiece = Timepiece.instance
+  end
+
   get '/' do
     erb :index
   end
@@ -20,8 +24,8 @@ class Birthday < Sinatra::Base
     @name = session[:name]
     @day = session[:day]
     @month = session[:month]
-    @user = Timepiece.new(@month, @day)
-    @user.birthday? ? (redirect to('/birthday_message')) :  (redirect to('/birthday_countdown'))
+    @timepiece = Timepiece.create(@month, @day)
+    @timepiece.birthday? ? (redirect to('/birthday_message')) :  (redirect to('/birthday_countdown'))
   end
 
   get '/birthday_message' do
@@ -31,10 +35,7 @@ class Birthday < Sinatra::Base
 
   get '/birthday_countdown' do
     @name = session[:name]
-    @day = session[:day]
-    @month = session[:month]
-    @user = Timepiece.new(@month, @day)
-    @countdown = @user.calculate_countdown
+    @countdown = @timepiece.calculate_countdown
     erb :birthday_countdown
   end
   
