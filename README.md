@@ -30,7 +30,7 @@ Once the dependencies are installed, type in the command line:
 rackup
 ```
 
-Vist [*this*](localhost:9292) in your browser and fill Name, day and month criteria to find out if it is your birthday, or indeed how many days until your birthday!
+Vist [*this*](http://localhost:9292/) in your browser and fill Name, day and month criteria to find out if it is your birthday, or indeed how many days until your birthday!
 
 In order to run the testing suite RSpec, open up the project directory in the terminal, and type in the command line type:
 
