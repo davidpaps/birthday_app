@@ -41,10 +41,10 @@ rspec
 ---
 
 ### Homepage
-<img src="./images/multiplayer.png">
+<img src="./images/homepage.png">
 
 ### Birthday Message
-<img src="./images/multiplayer.png">
+<img src="./images/birthday-message.png">
 
 ### Countdown Message
-<img src="./images/multiplayer.png">
+<img src="./images/countdown-message.png">
